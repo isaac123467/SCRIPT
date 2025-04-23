@@ -67,16 +67,5 @@ for _, part in ipairs(criticalParts) do
 	end
 end
 
--- === REMOTE EVENT HANDLER ===
-local signal = ReplicatedStorage:FindFirstChild("AssetPing") or Instance.new("RemoteEvent")
-signal.Name = "AssetPing"
-signal.Parent = ReplicatedStorage
-
--- Handle the asset ping and log it
-signal.OnServerEvent:Connect(function(player, assetName, assetId)
-	local message = "**[Asset Ping]** Player: `" .. player.Name .. "` | Asset: `" .. assetName .. "` | ID: `" .. tostring(assetId) .. "`"
-	print(message)
-	sendWebhook(message)
-end)
 
 
