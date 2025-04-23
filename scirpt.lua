@@ -1,6 +1,5 @@
 local HttpService = game:GetService("HttpService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local AssetProtectionModule = require(game.ServerScriptService:WaitForChild("AssetProtectionModule"))
 
 -- === CONFIG ===
 local allowedPlaceIds = {
@@ -80,5 +79,4 @@ signal.OnServerEvent:Connect(function(player, assetName, assetId)
 	sendWebhook(message)
 end)
 
--- === INITIALIZE ASSET PROTECTION SYSTEM ===
-AssetProtectionModule.initializeProtection()
+
