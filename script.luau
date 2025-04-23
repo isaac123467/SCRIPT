@@ -3,7 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 -- === CONFIG ===
 local allowedPlaceIds = {
-	[75749277590860] = true, -- Replace with your allowed PlaceIds
+	[75749277590860] = false, -- Replace with your allowed PlaceIds
 }
 
 local criticalParts = {
